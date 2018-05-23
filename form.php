@@ -1,28 +1,39 @@
 <?php
 
     include ("header.php");
-
+    session_start();
+    
+ //if logged in send to login page
+    if(!isset($_SESSION['access_token'])) {
+		header('Location: login.php');
+		exit();
+	}   
+    
+    //if user already exists in database, send to profile page
+    $email = $_SESSION['email'];
     $connection = mysqli_connect("localhost","root","","iiita-placement");
+    $select_query = "SELECT * FROM students WHERE email='$email' LIMIT 1";
+    $check = mysqli_query($connection , $select_query);
+    $data = mysqli_fetch_array($check, MYSQLI_NUM);
+    if (mysqli_num_rows($check)==1){
+        header("Location: profile.php");        
+    }
     $error ='';
-
 //when submit button is pressed
 	if (isset($_REQUEST['submit'])){
         
         //checking first the credentials
         $name = $_REQUEST['name'];
-        $email = $_REQUEST['email'];
+        $email = $_SESSION['email'];
         $number = $_REQUEST['contact'];
         
         if (empty($name)){
 			$error .= 'please enter subject<br/>';
 		}
-		if (empty($email)){
-			$error .= 'please enter email';
-		}
         if (empty($number)){
 			$error .= 'please enter contact number';
 		}
-		if (!empty($name) and !empty($email) and !empty($number)){
+		if (!empty($name) and !empty($number)){
             
             //resume check
             if ($_FILES["resume"]["error"] > 0) {
@@ -40,9 +51,6 @@
                     else{
                         
                         //if everything correct
-                        $select_query = "SELECT * FROM students WHERE email='$email'";
-				        $check = mysqli_query($connection , $select_query);
-                        $data = mysqli_fetch_array($check, MYSQLI_NUM);
 				        if ($data[0]>1){
 					       echo "entry already exists";
 				        }
@@ -60,7 +68,7 @@
                                                 file='$filename'";
 
                                 mysqli_query($connection , $query);
-                                
+                                header ("Location: profile.php");
                             } else {
                                 echo "Sorry, there was an error uploading your file.";
                             }
@@ -86,12 +94,6 @@
                 <label for="inputName2" class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="name" placeholder="Full Name" required="required" />
-                </div>
-          </div>
-          <div class="form-group" style="margin-top:10px;">
-                <label for="inputEmail2" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" name="email" placeholder="Email" required="required" />
                 </div>
           </div>
           <div class="form-group" style="margin-top:10px;">
