@@ -23,7 +23,7 @@
     $_SESSION['name']=$user['name'];
    
 	if (strpos($user->email, 'iiita.ac.in')) {
-        header( "Location: profile.php" );   
+        header( "Location: form.php" );   
     } else {
         header( "Location: login.php" );
         unset($_SESSION['access_token']);
