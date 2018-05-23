@@ -71,7 +71,7 @@
                 }
                 else{
 
-                        echo"Error, Extentions other than pdf is prohibited"."<br>";
+                        echo"Error, Extentions other than pdf are prohibited"."<br>";
                 }
            }            
 		}
