@@ -17,7 +17,6 @@
 		exit();
 	}
 ?>
-<a href="logout.php">logout</a>
 <?php
 
     include ("footer.php");
