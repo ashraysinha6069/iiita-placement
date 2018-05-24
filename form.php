@@ -1,7 +1,6 @@
 <?php
 
     include ("header.php");
-    session_start();
     
  //if logged in send to login page
     if(!isset($_SESSION['access_token'])) {
@@ -88,22 +87,22 @@
 
 <div class="container content">
     <hr/>
-    <span style="font-size:20px; margin:20px 20px;">Enter your details</span>
+    <span style="font-size:20px; margin:20px 20px;" style="font-family: 'Montserrat', sans-serif;">Enter your details</span>
     <form class="form-horizontal" style="margin-top:10px;" name="frm" method="post" action="form.php" enctype="multipart/form-data">
           <div class="form-group" style="margin-top:10px;">
-                <label for="inputName2" class="col-sm-2 control-label">Name</label>
+                <label for="inputName2" class="col-sm-2 control-label" style="font-family: 'Montserrat', sans-serif;">Name</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="name" placeholder="Full Name" required="required" />
                 </div>
           </div>
           <div class="form-group" style="margin-top:10px;">
-                <label for="inputContact2" class="col-sm-2 control-label">Phone number</label>
+                <label for="inputContact2" class="col-sm-2 control-label" style="font-family: 'Montserrat', sans-serif;">Phone number</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" name="contact" maxlength="10" size="10" required="required"  />
+                    <input type="number" class="form-control" name="contact" required="required" />
                 </div>
           </div>
           <div class="form-group" style="margin-top:10px;">
-                <label for="file">Upload your resume</label>
+                <label for="file" style="font-family: 'Montserrat', sans-serif;">Upload your resume</label>
                 <input type="file" id="resume" name="resume" class="form-control-file" required="required" />
           </div>
           <div class="form-group">
