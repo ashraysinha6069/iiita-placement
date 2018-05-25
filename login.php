@@ -11,7 +11,7 @@
 <div class="container">
 <hr/>
 </div>
-<div class="container content">
+<div class="container">
     <div class="row mid-header">
         <div class="col-md-12 col-xm-12 middle">
             SIGN UP WITH YOUR IIITA ACCOUNT

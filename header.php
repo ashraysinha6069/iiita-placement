@@ -16,14 +16,14 @@
         <br>
             <div class="container content">
                 <div class="row">
-                    <div class="col-xs-12 col-md-12 heading">DEPARTMENT OF TRAINING & PLACEMENT</div>
+                    <div class="col-xs-12 col-md-12 heading" >DEPARTMENT OF TRAINING & PLACEMENT</div>
                 </div>
                 <div class="row mid-header">
                     <div class="col-md-3 col-xm-3" style="text-align: center;">
                         <img class="iiita-logo" src="assets/images/IIIT_logo_transparent.gif">
                     </div>
-                    <div class="col-md-9 col-xm-12 iiita">
-                        INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, ALLAHABAD
+                    <div class="col-md-9 col-xm-12 iiita"><a href="https://iiita.ac.in" style="color:black; text-decoration:none;">
+                        INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, ALLAHABAD</a>
                     </div>
                 </div>
             </div>

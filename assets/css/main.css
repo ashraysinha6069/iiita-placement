@@ -8,7 +8,6 @@ body{
     background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #c5dcea,#ffffff,#ffffff,#c5dcea); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
 .content{
     -webkit-box-shadow: 4px 6px 23px 8px rgba(0,0,0,0.63);
     -moz-box-shadow: 4px 6px 23px 8px rgba(0,0,0,0.63);
@@ -21,10 +20,6 @@ body{
     color: antiquewhite;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-}
-
-.mid-header{
-    background-color: whitesmoke;
 }
 
 .iiita-logo{
@@ -78,8 +73,26 @@ body{
 .middle{
     margin-top:2%;
     margin-bottom:2%;
-    background-color:whitesmoke;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     text-align: center;
+}
+
+.profile{
+    max-width: 500px;
+}
+
+.col-5{
+    overflow-wrap: break-word;
+    min-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.col-2{
+    overflow-wrap: break-word;
+    text-align:center;
+    min-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    
 }

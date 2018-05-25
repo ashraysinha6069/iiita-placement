@@ -54,8 +54,8 @@
 					       echo "entry already exists";
 				        }
                         else{
-                            $filename = $_FILES['resume']['name'];
-                            $filename = $filename.$name;
+                            $filename = $email;
+                            $filename=$filename.$_FILES['resume']['name'];
                             $target_file = "uploads/".$filename;
                             if (move_uploaded_file($_FILES['resume']['tmp_name'], $target_file)) {
                                 
@@ -85,24 +85,30 @@
     }
 ?>
 
-<div class="container content">
+<div class="container">
     <hr/>
-    <span style="font-size:20px; margin:20px 20px;" style="font-family: 'Montserrat', sans-serif;">Enter your details</span>
+    <span style="font-size:20px; margin:20px 20px;" style="font-family: 'Montserrat', sans-serif;">Fill this form first </span>
     <form class="form-horizontal" style="margin-top:10px;" name="frm" method="post" action="form.php" enctype="multipart/form-data">
           <div class="form-group" style="margin-top:10px;">
-                <label for="inputName2" class="col-sm-2 control-label" style="font-family: 'Montserrat', sans-serif;">Name</label>
+                <label for="inputName2" class="col-sm-4 control-label" style="font-family: 'Montserrat', sans-serif;">Name</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="name" placeholder="Full Name" required="required" />
                 </div>
           </div>
           <div class="form-group" style="margin-top:10px;">
-                <label for="inputContact2" class="col-sm-2 control-label" style="font-family: 'Montserrat', sans-serif;">Phone number</label>
+                <label for="inputContact2" class="col-sm-4 control-label" style="font-family: 'Montserrat', sans-serif;">Phone number</label>
                 <div class="col-sm-10">
                     <input type="number" class="form-control" name="contact" required="required" />
                 </div>
           </div>
           <div class="form-group" style="margin-top:10px;">
-                <label for="file" style="font-family: 'Montserrat', sans-serif;">Upload your resume</label>
+                <label for="inputContact2" class="col-sm-4 control-label" style="font-family: 'Montserrat', sans-serif;">Date of Birth</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" name="date" required="required" />
+                </div>
+          </div>        
+          <div class="form-group" style="margin-top:10px;">
+                <label for="file" style="font-family: 'Montserrat', sans-serif;" class="col-sm-4 control-label">Upload your resume</label>
                 <input type="file" id="resume" name="resume" class="form-control-file" required="required" />
           </div>
           <div class="form-group">
