@@ -26,24 +26,24 @@
 <div class="container content">    
     <br/>
     <div class="row">
-        <div class="col-5" style="text-align:center;">Name</div>
-        <div class="col-2" style="text-align:center;">:</div>
-        <div class="col-5"><?php echo $_SESSION['name'];?></div>
+        <div class="col-5" id="col-5" style="text-align:center;">Name</div>
+        <div class="col-2" id="col-2" style="text-align:center;">:</div>
+        <div class="col-5" id="col-5"><?php echo $_SESSION['name'];?></div>
     </div>
     <div class="row">
-        <div class="col-5" style="text-align:center;">E-mail address</div>
-        <div class="col-2" style="text-align:center;">:</div>
-        <div class="col-5"><?php echo $_SESSION['email']; ?></div>
+        <div class="col-5" id="col-5" style="text-align:center;">E-mail address</div>
+        <div class="col-2" id="col-2" style="text-align:center;">:</div>
+        <div class="col-5" id="col-5"><?php echo $_SESSION['email']; ?></div>
     </div>
     <div class="row">
-        <div class="col-5" style="text-align:center;">Contact</div>
-        <div class="col-2" style="text-align:center;">:</div>
-        <div class="col-5"><?php echo $_SESSION['contact']; ?></div>
+        <div class="col-5" id="col-5" style="text-align:center;">Contact</div>
+        <div class="col-2" id="col-2" style="text-align:center;">:</div>
+        <div class="col-5" id="col-5"><?php echo $_SESSION['contact']; ?></div>
     </div>
     <div class="row">
-        <div class="col-5" style="text-align:center;">Date of Birth</div>
-        <div class="col-2">:</div>
-        <div class="col-5"><?php echo $_SESSION['date'];?></div>
+        <div class="col-5" id="col-5" style="text-align:center;">Date of Birth</div>
+        <div class="col-2" id="col-2">:</div>
+        <div class="col-5" id="col-5"><?php echo $_SESSION['date'];?></div>
     </div>
     <div class="row">
         <div class="col-12" style="text-align:center;">
