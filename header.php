@@ -10,7 +10,7 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/site.js"></script>
         <link href="css/main.css" rel="stylesheet" type="text/css"> 
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:900|Playfair+Display|Montserrat|Montserrat+Alternates" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:900|Playfair+Display|Montserrat|Montserrat+Alternates|Fjalla+One" rel="stylesheet">
     </head>
     <body>
         <br>
