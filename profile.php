@@ -23,8 +23,9 @@
     $_SESSION['student_file']=$data['file']; 
     $_SESSION['student_date']=$data['date-of-birth'];
 ?>
-<hr/>
-<div class="container content">    
+
+<div class="container content mid-header">
+    <hr/>
     <br/>
     <div class="row">
         <div class="col-5" id="col-5" style="text-align:center;">Name</div>
@@ -56,6 +57,7 @@
         </div>
     </div>
 </div>
+<br/>
 <?php
 
     include ("footer.php");

@@ -85,7 +85,7 @@
     }
 ?>
 
-<div class="container">
+<div class="container content mid-header">
     <hr/>
     <span style="font-size:20px; margin:20px 20px;" style="font-family: 'Montserrat', sans-serif;">Fill this form first </span>
     <form class="form-horizontal" style="margin-top:10px;" name="frm" method="post" action="form.php" enctype="multipart/form-data">

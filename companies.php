@@ -16,6 +16,7 @@
 <!-- main content starts-->
 
 <div class="container content mid-header">
+    <hr/>
     <div class="row" style="padding-top:3%; padding-left:3%; padding-right:3%; padding-bottom:3%;">
         <?php
             while($data = mysqli_fetch_array($check)){
