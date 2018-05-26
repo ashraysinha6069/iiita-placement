@@ -8,7 +8,7 @@
 	} 
 
     //if user does not exists in database, send to form page
-    $email = $_SESSION['email'];
+    $email = $_SESSION['student_email'];
     $connection = mysqli_connect("localhost","root","","iiita-placement");
     $check = mysqli_query($connection , $select_query);
     if (mysqli_num_rows($check)!=1){
@@ -17,8 +17,8 @@
 
     if(isset($_REQUEST['submit'])){
         $target = "uploads/";
-        $target=$target.$_SESSION['file'];
-        $delete_query = "DELETE FROM students WHERE email='$email'";
+        $target=$target.$_SESSION['student_file'];
+        $delete_query = "DELETE FROM students WHERE student_email='$email'";
         mysqli_query($connection,$delete_query);
         unlink($target);
         header("Location: profile.php");

@@ -9,9 +9,9 @@
 	}   
     
     //if user already exists in database, send to profile page
-    $email = $_SESSION['email'];
+    $email = $_SESSION['student_email'];
     $connection = mysqli_connect("localhost","root","","iiita-placement");
-    $select_query = "SELECT * FROM students WHERE email='$email' LIMIT 1";
+    $select_query = "SELECT * FROM students WHERE student_email='$email' LIMIT 1";
     $check = mysqli_query($connection , $select_query);
     $data = mysqli_fetch_array($check, MYSQLI_NUM);
     if (mysqli_num_rows($check)==1){
@@ -23,7 +23,7 @@
         
         //checking first the credentials
         $name = $_REQUEST['name'];
-        $email = $_SESSION['email'];
+        $email = $_SESSION['student_email'];
         $number = $_REQUEST['contact'];
         
         if (empty($name)){
@@ -60,10 +60,10 @@
                             if (move_uploaded_file($_FILES['resume']['tmp_name'], $target_file)) {
                                 
                                 $query  = "INSERT INTO students SET
-                                                id='',
-                                                name='$name',
-                                                email='$email',
-                                                contact='$number',
+                                                student_id='',
+                                                student_name='$name',
+                                                student_email='$email',
+                                                student_contact='$number',
                                                 file='$filename'";
 
                                 mysqli_query($connection , $query);

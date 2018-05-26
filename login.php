@@ -2,6 +2,8 @@
     
     require_once "config.php";
     include ("header.php");
+//if not logged in send to login page
+
     if(isset($_SESSION['access_token'])) {
         header('Location: profile.php');
         exit();
