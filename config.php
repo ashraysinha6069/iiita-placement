@@ -11,4 +11,6 @@
     $gClient->setRedirectUri("http://localhost/iiita-placement/redirect.php");
     $gClient->setScopes(array("https://www.googleapis.com/auth/plus.login", "https://www.googleapis.com/auth/userinfo.email", 'https://www.googleapis.com/auth/userinfo.profile'));
 
+
+
 ?>

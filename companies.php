@@ -1,5 +1,6 @@
 <?php
     include ("header.php");
+    include ("student_panel.php");
     session_start();
 
  //if not logged in send to login page

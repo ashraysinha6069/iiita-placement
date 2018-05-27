@@ -2,6 +2,7 @@
     
     require_once "config.php";
     include ("header.php");
+    include ("student_panel.php");
 //if not logged in send to login page
 
     if(isset($_SESSION['access_token'])) {
@@ -10,10 +11,11 @@
     }
     $loginurl = $gClient->createAuthUrl();
 ?>
+
 <div class="container">
 <hr/>
 </div>
-<div class="container">
+<div class="container content shadow">
     <div class="row mid-header">
         <div class="col-md-12 col-xm-12 middle">
             SIGN UP WITH YOUR IIITA ACCOUNT

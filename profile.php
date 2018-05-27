@@ -1,6 +1,7 @@
 <?php
 
     include ("header.php");
+    include ("student_panel.php");
     session_start();
 
     //if user does not exists in database, send to form page
@@ -23,9 +24,9 @@
     $_SESSION['student_file']=$data['file']; 
     $_SESSION['student_date']=$data['date-of-birth'];
 ?>
-
-<div class="container content mid-header">
-    <hr/>
+<div class="container"><hr/></div>
+<div class="container content mid-header shadow">
+    
     <br/>
     <div class="row">
         <div class="col-5" id="col-5" style="text-align:center;">Name</div>

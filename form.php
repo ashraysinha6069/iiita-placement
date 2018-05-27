@@ -1,6 +1,7 @@
 <?php
 
     include ("header.php");
+    include ("student_panel.php");
     
  //if not logged in send to login page
     if(!isset($_SESSION['access_token'])) {
