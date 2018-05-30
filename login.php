@@ -23,6 +23,9 @@
         <div class="col-md-12 col-xm-6 middle">
             <a href="<?php echo $loginurl ?>"><img src="https://developers.google.com/+/images/branding/sign-in-buttons/Red-signin_Google_base_44dp.png" style="height:60%; "></a>            
         </div>
+        <div class="col-md-12 col-xm-6 middle">
+            <a href="company_login.php" class="btn btn-success company_login_button">Companies login here</a>            
+        </div>
 
     </div>
 </div>

@@ -2,6 +2,13 @@
 
     include("header.php");
     include("company_panel.php");
+    session_start();
+
+//if company not logged in, send to the login page
+    if(!isset($_SESSION['company_username'])){
+        header("Location: company_login.php");
+    }
+
 
 ?>
 
@@ -121,9 +128,9 @@
                   </div>
             </div>
         </div>
-        <div style="text-align:center;">
-            <button type="button" class="btn btn-success">Download Data as Pdf</button>
-            <button type="button" class="btn btn-danger">Download Data as doc</button>
+        <div style="text-align:center;"><form action="download.php" method="POST">
+            <button type="submit" class="btn btn-success">Download Data as Excel</button></form>
+            <button type="button" class="btn btn-danger">Download Datc</button>
         </div>
     </div>
 </div>

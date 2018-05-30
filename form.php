@@ -24,6 +24,7 @@
         
         //checking first the credentials
         $name = $_REQUEST['name'];
+        $roll = $_REQUEST['roll'];
         $email = $_SESSION['student_email'];
         $number = $_REQUEST['contact'];
         
@@ -33,6 +34,9 @@
         if (empty($number)){
 			$error .= 'please enter contact number';
 		}
+        if(empty($roll)){
+            $error .='Please enter Roll Number';
+        }
 		if (!empty($name) and !empty($number)){
             
             //resume check
@@ -62,6 +66,7 @@
                                 
                                 $query  = "INSERT INTO students SET
                                                 student_id='',
+                                                student_roll_no='$roll',
                                                 student_name='$name',
                                                 student_email='$email',
                                                 student_contact='$number',
@@ -88,12 +93,18 @@
 
 <div class="container content mid-header">
     <hr/>
-    <span style="font-size:20px; margin:20px 20px;" style="font-family: 'Montserrat', sans-serif;">Fill this form first </span>
+    <span style="font-size:20px; margin:20px 20px; font-family: 'Montserrat', sans-serif;">Fill this form first </span>
     <form class="form-horizontal" style="margin-top:10px;" name="frm" method="post" action="form.php" enctype="multipart/form-data">
           <div class="form-group" style="margin-top:10px;">
                 <label for="inputName2" class="col-sm-4 control-label" style="font-family: 'Montserrat', sans-serif;">Name</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" name="name" placeholder="Full Name" required="required" />
+                </div>
+          </div>
+          <div class="form-group" style="margin-top:10px;">
+                <label for="inputroll2" class="col-sm-4 control-label" style="font-family: 'Montserrat', sans-serif;">Roll Number</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="roll" placeholder="Roll No." required="required" />
                 </div>
           </div>
           <div class="form-group" style="margin-top:10px;">

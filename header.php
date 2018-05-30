@@ -10,7 +10,7 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/site.js"></script>
         <link href="css/main.css" rel="stylesheet" type="text/css"> 
-        <link href="https://fonts.googleapis.com/css?family=Catamaran:900|Playfair+Display|Montserrat|Montserrat+Alternates|Fjalla+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:900|Playfair+Display|Montserrat:300|Montserrat+Alternates|Fjalla+One" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     </head>
     <body>
