@@ -37,9 +37,7 @@ body{
 .iiita{
     font-size: 28px;
     font-family: 'Playfair Display', serif;
-    padding-top: 4%;
     font-weight:bolder;
-    padding-top: 2%;
     text-align: center;
 }
 
@@ -193,12 +191,12 @@ body{
 }
 
 .mdb-student{
-    min-height:30em;
     background-color: white;
     font-weight: normal;
     padding: 2em;
     width: auto;
-    font-size: 13px;    
+    font-size: 13px;   
+    font-family: 'Montserrat', sans-serif;
 }
 
 .table_row:hover{
@@ -212,6 +210,7 @@ body{
 #myTable
 {
     counter-reset: Serial;           /* Set the Serial counter to 0 */
+    width: 100%;
 }
 
 #myTable tr td:first-child:before
@@ -233,8 +232,13 @@ body{
     text-align: center;
     padding: 0px;
 }
+
+.resume_button{
+    background: none;
+    border: none;
+}
+.resume_button:hover{
+    background: #b6d5f6;
+}
 /* CSS for companies login page ends*/
 
-div{
-    border: 0.5px solid green;
-}

@@ -15,21 +15,19 @@
         header('Location: http://localhost/iiita-placement/login.php');
         exit(); 
     }
-
     $oAuth = new Google_Service_Oauth2($gClient);
     
     $user = $oAuth->userinfo_v2_me->get();
     $_SESSION['student_email']=$user['email'];
     $_SESSION['student_name']=$user['name'];
    
-	if (strpos($user->email, 'iiita.ac.in')) {
-        header( "Location: form.php" );   
-    } else {
-        header( "Location: login.php" );
-        unset($_SESSION['access_token']);
-        unset($authUrl);
-        session_destroy();
-    }    
-echo "redirect page";
-
+//	if (strpos($user->email, 'iiita.ac.in')) {
+//        header( "Location: form.php" );   
+//    } else {
+//        header( "Location: login.php" );
+//        unset($_SESSION['access_token']);
+//        unset($authUrl);
+//        session_destroy();
+//    }    
+        header("Location: form.php");
 ?>
