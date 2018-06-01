@@ -20,6 +20,8 @@
 		exit();
 	}
     $data = mysqli_fetch_array($check);
+    $_SESSION['student_id']=$data['student_id'];
+    $_SESSION['student_name']=$data['student_name'];
     $_SESSION['student_contact']=$data['student_contact'];
     $_SESSION['student_roll_no']=$data['student_roll_no'];
     $_SESSION['student_file']=$data['file']; 
