@@ -21,8 +21,9 @@
 			$error .= 'please enter Password<br/>';
 		}
 		if (!empty($username) and !empty($password)){
-				$select_query = "SELECT * FROM companies WHERE company_username='$username' and company_password='$password'";
-				$check = mysqli_query($connection , $select_query);
+				$select_query = "SELECT * FROM companies WHERE company_username='%s' and company_password='%s';";
+                $out_query = sprintf($select_query, mysqli_real_escape_string($connection, $username), mysqli_real_escape_string($connection, $password));
+				$check = mysqli_query($connection , $out_query);
 				if (mysqli_num_rows($check)==0){
 					$error .= 'Invalid username/password';
 				}

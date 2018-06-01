@@ -21,6 +21,7 @@
 	}
     $data = mysqli_fetch_array($check);
     $_SESSION['student_contact']=$data['student_contact'];
+    $_SESSION['student_roll_no']=$data['student_roll_no'];
     $_SESSION['student_file']=$data['file']; 
     $_SESSION['student_date']=$data['date-of-birth'];
 ?>
@@ -32,6 +33,11 @@
         <div class="col-5" id="col-5" style="text-align:center;">Name</div>
         <div class="col-2" id="col-2" style="text-align:center;">:</div>
         <div class="col-5" id="col-5"><?php echo $_SESSION['student_name'];?></div>
+    </div>
+    <div class="row">
+        <div class="col-5" id="col-5" style="text-align:center;">Roll No.</div>
+        <div class="col-2" id="col-2" style="text-align:center;">:</div>
+        <div class="col-5" id="col-5"><?php echo $_SESSION['student_roll_no'];?></div>
     </div>
     <div class="row">
         <div class="col-5" id="col-5" style="text-align:center;">E-mail address</div>
@@ -50,11 +56,9 @@
     </div>
     <div class="row">
         <div class="col-12" style="text-align:center;">
-            <form class="form-horizontal" style="margin-top:10px;" name="frm" method="post" action="modify.php" enctype="multipart/form-data">
                 <div class="form-group">
-                      <button type="submit" name="submit" class="btn btn-default">Fill form again</button>
+                    <a href="edit_profile.php" class="btn btn-primary">Edit profile</a>
               </div>
-            </form>
         </div>
     </div>
 </div>
