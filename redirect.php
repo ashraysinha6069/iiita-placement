@@ -19,7 +19,6 @@
     
     $user = $oAuth->userinfo_v2_me->get();
     $_SESSION['student_email']=$user['email'];
-    $_SESSION['student_name']=$user['name'];
    
 //	if (strpos($user->email, 'iiita.ac.in')) {
 //        header( "Location: form.php" );   
