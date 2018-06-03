@@ -19,6 +19,7 @@
 		header('Location: login.php');
 		exit();
 	}
+
     $data = mysqli_fetch_array($check);
     $_SESSION['student_id']=$data['student_id'];
     $_SESSION['student_name']=$data['student_name'];
@@ -26,6 +27,16 @@
     $_SESSION['student_roll_no']=$data['student_roll_no'];
     $_SESSION['student_file']=$data['file']; 
     $_SESSION['student_date']=$data['date-of-birth'];
+    $_SESSION['student_status']=$data['student_status'];
+
+//if user deactivated send to logout
+    if($_SESSION['student_status'] == '1'){
+        require_once 'config.php';
+        unset($_SESSION['access_token']);
+        $gClient->revokeToken();
+        session_destroy();
+        header('Location: login.php?msg=0');
+    }
 ?>
 <div class="container"><hr/></div>
 <div class="container content mid-header shadow">

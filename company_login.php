@@ -44,6 +44,12 @@
 		}
 	
 	}
+    
+        if(isset($_GET['msg'])){
+            if( $_GET['msg'] == 6069 ){
+                $error .= "Account created successfully.You can login now";
+            }
+        }
 
 ?>
     <div class="container company_login_page">

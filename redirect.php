@@ -19,7 +19,6 @@
     
     $user = $oAuth->userinfo_v2_me->get();
     $_SESSION['student_email']=$user['email'];
-   
 //	if (strpos($user->email, 'iiita.ac.in')) {
 //        header( "Location: form.php" );   
 //    } else {
@@ -28,5 +27,6 @@
 //        unset($authUrl);
 //        session_destroy();
 //    }    
+        
         header("Location: form.php");
 ?>

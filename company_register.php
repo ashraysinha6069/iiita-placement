@@ -64,13 +64,8 @@
                                         company_is_approved='0'";
 
                     mysqli_query($connection , $query);
-                    header ("Location: company_dashboard.php?msg=6069");                    
+                    header ("Location: company_login.php?msg=6069");                    
                 }
-        }
-    }
-    if(isset($_GET['msg'])){
-        if( $_GET['msg'] == 6069 ){
-            $error .= "Account created successfully.You can login now";
         }
     }
 

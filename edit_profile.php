@@ -148,7 +148,7 @@
 <script type="text/javascript">
     function callme(e){
         e.preventDefault();
-        $("#resume").toggle();
+        $("#resume").fadeToggle();
     };   
 </script>
 <?php
