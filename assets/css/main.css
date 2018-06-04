@@ -291,4 +291,22 @@ body{
     color: white;
 	margin: 0;
 }
+
+.mdb-select{
+    width:10em;
+    font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+    font-size:16px;
+    font-weight: 100;
+}
+
+.year_checkbox{
+    text-align: center;
+    font-family: 'montserrat', sans-serif;
+    font-size: 14px; 
+    padding-bottom:3%;
+}
+
+.modal-content{
+    font-family: 'Montserrat', sans-serif;
+}
 /* CSS for admin ends */
