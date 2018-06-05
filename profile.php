@@ -38,7 +38,7 @@
         header('Location: login.php?msg=0');
     }
 ?>
-<div class="container"><hr/></div>
+<div class="container"><hr/><hr/></div>
 <div class="container content mid-header shadow">
     
     <br/>
