@@ -4,6 +4,9 @@
     
     $error='';
     $connection = mysqli_connect("localhost","root","","iiita-placement");
+
+    
+//when button clicked login admin
     if (isset($_REQUEST['login'])){
 		
 		$admin_username=$_REQUEST['admin_username'];
