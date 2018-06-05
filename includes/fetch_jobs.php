@@ -89,11 +89,11 @@
                                             
                                             echo '<div  class="year_checkbox"><hr/> 
                                                      Select students to send job request<br/><br/>
-                                                          <input type="checkbox" name="years" value="btech_3rd"> B.Tech 3rd Year &nbsp &nbsp
-                                                          <input type="checkbox" name="years" value="btech_4th"> B.Tech 4th Year <br/>
-                                                          <input type="checkbox" name="years" value="dual_3rd"> Dual Degree 3rd Year &nbsp &nbsp
-                                                          <input type="checkbox" name="years" value="dual_4th"> Dual Degree 4th Year <br/>
-                                                          <input type="checkbox" name="years" value="dual_5th"> Dual Degree 5th Year <br/>
+                                                          <input type="checkbox" name="years" value="year_2018"> 1st Year &nbsp &nbsp
+                                                          <input type="checkbox" name="years" value="year_2017"> 2nd Year <br/>
+                                                          <input type="checkbox" name="years" value="year_2016"> 3rd Year &nbsp &nbsp
+                                                          <input type="checkbox" name="years" value="year_2015"> 4th Year <br/>
+                                                          <input type="checkbox" name="years" value="year_2014"> 5th Year <br/>
                                                           <button type="submit" name="submit" value="'.$job_id.'" class="btn btn-success" onclick="approval('.$job_id.')">Approve</button>  
                                                 </div>';  
                                         };

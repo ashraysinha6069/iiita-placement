@@ -154,7 +154,7 @@ body{
 }
 
 .company-details-row{
-    height: 3em;
+    height: 2em;
     overflow: hidden; 
     text-overflow: ellipsis;
     margin-bottom: 10px;

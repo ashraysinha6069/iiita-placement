@@ -20,7 +20,7 @@
         $new_insert_query = rtrim($insert_query,", ");
         $insert_check = mysqli_query($connection , $new_insert_query);
         
-        $data['detail']="success";
+        $data['detail']=$insert_query;
         
         echo json_encode($data);
     }

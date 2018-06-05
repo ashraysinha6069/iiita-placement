@@ -1,7 +1,7 @@
 <div class="container content">
     <div class="row mid-header">
         <div class="col-xs-3 col-md-2 links-a"><a href="profile.php" class="link-a"><i class="far fa-user"></i>&nbsp Profile</a></div>
-        <div class="col-xs-3 col-md-2 links-a"><a href="companies.php" class="link-a"><i class="fas fa-briefcase"></i>&nbsp Companies</a></div>
+        <div class="col-xs-3 col-md-2 links-a"><a href="companies.php" class="link-a"><i class="fas fa-briefcase"></i>&nbsp Jobs open</a></div>
         <div class="col-xs-6 col-md-8 links-b">
         <?php
             error_reporting(0);

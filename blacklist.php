@@ -18,7 +18,7 @@
 <div class="container"><hr/></div>
 <div class="container content mid-header">
     <br/>
-        <span style="font-size:25px; margin:20px 20px;" style="font-family: 'Montserrat', sans-serif;">Blacklist </span>
+        <span style="font-size:25px; margin:20px 20px;" style="font-family: 'Montserrat', sans-serif;">Students </span>
         <div class="mdb-company thumbnail" style="font-family: 'Montserrat', sans-serif;" >     
               <div class="row">
                   <table class="table table-striped">
@@ -28,7 +28,7 @@
                               <th>Roll no.<i class="fas fa-sort"></i></th>
                               <th>e-mail<i class="fas fa-sort"></i></th>
                               <th>status<i class="fas fa-sort"></i></th>
-                              <th></th>
+                              <th>Blacklist</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -70,10 +70,10 @@
         function togglestudent(id,name,status){
             
         if(status === '1'){
-            var towhere = "remove_from_blacklist.php";
+            var towhere = "includes/remove_from_blacklist.php";
         }
         else{
-            var towhere = "add_to_blacklist.php";
+            var towhere = "includes/add_to_blacklist.php";
         }
             $.ajax({
                type: "POST",

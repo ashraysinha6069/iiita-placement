@@ -11,4 +11,7 @@
         
         echo json_encode($data);
     }
+    else{
+        header("Location: ../admin_login.php");
+    }
 ?>

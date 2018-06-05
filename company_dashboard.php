@@ -41,7 +41,7 @@
                                     $job_location = $data['job_location'];
                                     $job_type = $data['job_type'];
                                     $job_ctc = $data['job_ctc'];
-                                    
+                            //a modal class present for each job
                                     echo '
                                     <tr class="table_row" data-toggle="modal" data-target="#open-modal-'.$job_id.'">
                                         <td>'.$job_id.'</td>
@@ -57,7 +57,7 @@
                   </table>
               </div>
         </div>
-    <?php include("company_modal.php")?>
+    <?php include("includes/company_modal.php")?>
 </div><br/>
 
 <?php
