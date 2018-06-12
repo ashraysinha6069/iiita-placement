@@ -2,6 +2,7 @@
 
     include ("header.php");
     session_start();
+
 //if company logged in, send to the dashboard page
     if(isset($_SESSION['company_username'])){
         header("Location: company_dashboard.php");

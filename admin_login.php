@@ -1,11 +1,15 @@
 <?php
 
     include("header.php");
-    
+    session_start();
     $error='';
     $connection = mysqli_connect("localhost","root","","iiita-placement");
-
     
+//if logged in send to profile
+    if(isset($_SESSION['admin_token'])){
+        header("Location: admin_profile.php");
+    }
+
 //when button clicked login admin
     if (isset($_REQUEST['login'])){
 		
@@ -21,7 +25,6 @@
 		if (!empty($admin_username) and !empty($admin_password)){
             
 				if($admin_username === "admin" && $admin_password === "admin123"){
-                    session_start();
                     $_SESSION['admin_token'] = $admin_username;
                     header("Location: admin_profile.php");
                 }

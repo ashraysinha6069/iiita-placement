@@ -50,13 +50,13 @@
 
                    //check size
                     if($_FILES["resume"]["size"]/1048576>5){   //Larger than 5 MB is prohibited 
-                        echo "File size IS LARGER than 5 MB";
+                        $error .= "File size IS LARGER than 5 MB";
                     }
                     else{
                         
                         //if everything correct
 				        if ($data[0]>1){
-					       echo "entry already exists";
+					       $error .= "entry already exists";
 				        }
                         else{
                             $filename = $email;
@@ -75,7 +75,7 @@
                                 mysqli_query($connection , $query);
                                 header ("Location: profile.php");
                             } else {
-                                echo "Sorry, there was an error uploading your file.";
+                                $error .= "Sorry, there was an error uploading your file.";
                             }
                 
                         }
@@ -84,7 +84,7 @@
                 }
                 else{
 
-                        echo"Error, Extentions other than pdf are prohibited"."<br>";
+                        $error .= "Error, Extentions other than pdf are prohibited"."<br>";
                 }
            }            
 		}
@@ -94,6 +94,7 @@
 <div class="container content mid-header">
     <hr/>
     <span style="font-size:20px; margin:20px 20px; font-family: 'Montserrat', sans-serif;">Fill this form first </span>
+    <span style="font-size:20px; margin:20px 20px; font-family: 'Montserrat', sans-serif; color:red;"><?php echo $error;?></span>
     <form class="form-horizontal" style="margin-top:10px;" name="frm" method="post" action="form.php" enctype="multipart/form-data">
           <div class="form-group" style="margin-top:10px;">
                 <label for="inputName2" class="col-sm-4 control-label" style="font-family: 'Montserrat', sans-serif;">Name</label>

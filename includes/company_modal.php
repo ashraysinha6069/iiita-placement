@@ -9,7 +9,8 @@
             //render all students who accepted request
                 $select_query = "SELECT * FROM relations WHERE company_id='$id' AND job_id='$job_id'";
                 $check2 = mysqli_query($connection,$select_query);
-                                    
+
+                
                  echo '
         <!-- -----------------modal class statrs--------------------- --> 
                         
@@ -40,30 +41,51 @@
                                                   <tbody>
                                                         ';?>
                                                         <?php include("company_modal_students.php");?>    
-                                                        <?echo '
+                                                        <?php echo '
                                                   </tbody>
                                               </table>
                                           </div>
                                     </div>
                                 </div>
-                                <div style="text-align:center; padding-bottom:3%;">    
-                                    <button type="submit" class="btn btn-success table_download_'.$job_id.'">Download Data as Excel</button>
-                                </div>
+                                <div style="text-align:center; padding-bottom:3%;">';   
+                                //print button to download all data
+                                    echo '<form action="company_download.php" method="post">
+                                            <input type="hidden" value='.$job_id.' name="jobid">
+                                            <input type="hidden" value='.$id.' name="companyid">
+                                            <button name="submit" type="submit" class="btn btn-success">Download Data as Excel</button>
+                                          </form>';
+                                echo '</div>
                             </div>
                         </div>
                         </div>  
-    <!-- --------------------modal class ends-------------------------- -->
+    <!-- --------------------modal class ends-------------------------- -->';
                         
-    <!-- -------------------script to download table as excel----------------------- -->
-                        <script>
-                            $(".table_download_'.$job_id.'").click(function(){
-                                $(".students-data-table-'.$job_id.'").table2excel({
-                                    name: "students_data",
-                                    filename: "students"
-                                });
-                            });
-                        </script>
+    //<!-- -------------------script to download table as excel----------------------- -->
+                        //<script>
+                        //    $(".table_download_'.$job_id.'").click(function(){
+                        //        $(".students-data-table-'.$job_id.'").table2excel({
+                        //            name: "students_data",
+                        //            filename: "students"
+                        //        });
+                        //    });
+                        //</script>
 
-                 ';
+                 
              }
         ?>
+
+<!--<script>
+    function list_download(jobid,companyid){
+        $.ajax({
+               type: "POST",
+               url: "company_download.php",
+               data: {jobid: jobid,
+                      companyid: companyid},
+               dataType: "JSON",
+               success: function(data)
+                {
+                    alert(data.detail);
+                }
+            });
+    }
+</script>-->
